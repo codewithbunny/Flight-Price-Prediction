@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&family=Titillium+Web&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../../static/img/flight-back.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+header{
+    position: sticky;
+}
+.f-img {
+  margin: 2px 20px 0px 15px;
+  width: 35px;
+  height: 35px;
+  filter: invert(1);
+}
+.f-text {
+  display: flex;
+  /* border: 2px solid red; */
+  align-items: center;
+}
+.f-text h3 {
+  padding: 10px 0 0 0;
+  font-family: "Rubik", sans-serif;
+}
+
+.cyan-text {
+  color: cyan;
+  letter-spacing: 2.5px;
+  text-shadow: 2px 1.5px 3px black;
+  font-family: "Rubik", sans-serif;
+}
+
+.s12 {
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid red; */
+  padding: 1.3rem 0;
+}
+
+.box {
+  /* border: 2px solid black; */
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+/* .card-body{
+    border: 2px solid red;
+} */
+
+.card-body-row {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+}
+
+.date-lab-styling {
+  padding: 5px;
+  color: white;
+}
+
+.date-inp-styling {
+  padding: 5px;
+  border-radius: 5px;
+  border-style: inset;
+  border: 0px;
+}
+
+.select-styling {
+  padding: 5px 2px;
+  border-radius: 5px;
+  border-style: inset;
+  border: 0;
+  width: 99%;
+}
+
+.card-body-row input:focus,
+select:focus {
+  box-shadow: .5px 1px 20px rgba(5, 222, 255, 1);
+  border: 1px solid rgba(5, 222, 255, 1);
+  transition: border 0.3s;
+  outline: none;
+}
+
+
+.submit-btn {
+  position: relative;
+  left: 18px;
+  margin: 1rem 0;
+  min-width: 95%;
+  height: 50px;
+  background-color: #0a6bff;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: rgba(1, 60, 136, 0.5) 0 -1px 3px 0 inset,
+  rgba(0, 44, 97, 0.1) 0 3px 6px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inherit;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 20px;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+
+.submit-btn:hover {
+  background-color: #065dd8;
+  transform: translateY(-2px);
+}
+.result{
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 1rem 1rem;
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+}
+#result::after, #result::before{
+  content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 5px);
+	height: calc(100% + 5px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+  border-radius: 5px;
+}
+
+#result{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 95%;
+  height: 50px;
+  color: black;
+  padding-top: 1rem;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+
+}
+
+.result-span{
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: black;
+  margin-top: .1rem;
+  margin-left: 1rem;
+  letter-spacing: 2px;
+
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.result:after {
+	filter: blur(50px);
+}
+
+footer{
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  /* border: 2px solid red; */
+}
+.footer-section{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    
+}
+
+.footer-section p{
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 1rem;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 2px;
+}
+
+.footer-section p span{
+    color: cyan;
+}
+
+
+/* font-family: 'Rubik', sans-serif;
+font-family: 'Titillium Web', sans-serif; */

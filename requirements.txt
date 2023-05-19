@@ -1,4 +1,15 @@
-seaborn
 pandas
 numpy
--e .
+seaborn
+matplotlib
+scikit-learn
+catboost
+xgboost
+flask
+dill
+datetime
+typing
+django
+
+
+# -e .

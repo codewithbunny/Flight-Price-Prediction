@@ -15,7 +15,6 @@ def get_requirements(file_path:str) -> List[str]:
             req.remove(HYPEN_E)
     return req
 
-
 setup(
 
     name = 'mlproject',
